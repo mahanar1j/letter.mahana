@@ -17,6 +17,9 @@
 
 </head>
 <body>
+
+    <audio src="audio/button-202966.mp3" id="audio"></audio>
+    <audio src="audio/click-47609.mp3" id="letterAudio"></audio>
     <!-- ========================================================================================
                  portfolio section
  ======================================================================================== -->
@@ -24,7 +27,7 @@
  <section class="portfolio-section clearfix" id="portfolio" >
  
      <div class="sharari shari esha" >
-         <button class="btn">LETTER</button>
+         <button class="btn" id="letterBtn">LETTER</button>
      </div>
      <!-- <div class="iftari iftar ">
      <h2>Iftar Time</h2>
@@ -39,7 +42,7 @@
    
      
      <div class="button-parent">
-         <div class="portfolio-filter">
+         <div class="portfolio-filter" id="filterBtn">
         <button type="button" data-filter="all" >all</button>
          <button type="button"data-filter=".one ">Pic-Slide</button>
          <button type="button" data-filter=".two ">Pic-Slide</button>
@@ -204,6 +207,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.1.4/mixitup.min.js" integrity="sha512-SUvMZqfeO7PgW4YnNDeQEumL2IkwdjSTbefUJQren+xZmQfuZBob/Zb1pYZCd8bB5Vy+dkJXkaPB1HYTd7yT6g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
  <script src="vendors/jquery.ripples-min.js"></script>
     <script src="custom.js"></script>
+    <script>
+    const btn=document.getElementById('filterBtn');
+    const audio=document.getElementById('audio');
+    const letterBtn=document.getElementById('letterBtn');
+    const letterAudio=document.getElementById('letterAudio');
+    btn.addEventListener('click',function(){
+        playAudio();
+    });
+    letterBtn.addEventListener('click',function(){
+         playAudioLetter();
+    });
+    function playAudio(){
+    audio.play()
+}
+function playAudioLetter(){
+    letterAudio.play()
+}
+</script>
     
     
 </body>
