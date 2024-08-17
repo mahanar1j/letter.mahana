@@ -21,7 +21,7 @@ $('.button-parent').click(function(){
     $(".portfolio-section").ripples({
         resulation:512,
         dropredius:20,
-        perturbance:0.1,
+        perturbance:0.6,
     });
 
 
